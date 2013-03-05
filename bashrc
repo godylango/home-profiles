@@ -71,8 +71,8 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -108,12 +108,23 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # load rvm
 if [ -s "$HOME/.rvm/scripts/rvm" ]; then
-	source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+    source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-	# load git prompt
-	if [[ $- == *i* ]]
-	then
-		. ~/.rvm/contrib/ps1_functions
-		ps1_set --prompt \$
-	fi
+    # load git prompt
+    if [[ $- == *i* ]]; then
+        . ~/.rvm/contrib/ps1_functions
+        ps1_set --prompt \$
+    fi
 fi
+
+# Add the following to your ~/.bashrc or ~/.zshrc
+hitch() {
+    command hitch "$@"
+    if [[ -s "$HOME/.hitch_export_authors" ]] ; then
+        source "$HOME/.hitch_export_authors"
+    fi
+}
+alias unhitch='hitch -u'
+
+# Uncomment to persist pair info between terminal instances
+# hitch
