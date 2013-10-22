@@ -15,13 +15,13 @@
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
 [user]
-#	email = bosco@sfruby.info
-#	name = Bosco So
+	# email = random_githubber@indiegogo.com
+	# name = Random Githubber
 
 [apply]
 	whitespace = nowarn
 [core]
-	excludesfile = /Users/bosco/.gitignore_global
+	# excludesfile = /Users/random_githubber/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
