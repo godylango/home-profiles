@@ -25,3 +25,6 @@ export RUBY_HEAP_FREE_MIN=100000
 export RUBY_HEAP_SLOTS_INCREMENT=300000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=79000000
+
+# read the .ackrc at each directory level instead of just ~
+export ACKRC=".ackrc"
