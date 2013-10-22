@@ -128,3 +128,9 @@ alias unhitch='hitch -u'
 
 # Uncomment to persist pair info between terminal instances
 # hitch
+
+# command line completion of git branches for Mac OS X Homebrew
+[ -f /usr/local/etc/bash_completion.d/git-completion.bash ] && \
+    . /usr/local/etc/bash_completion.d/git-completion.bash
+
+stty stop ^X
