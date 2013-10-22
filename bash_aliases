@@ -1,3 +1,5 @@
+#-*-shell-script-*-
+
 # Mac OSX specific
 alias aquamacs='open -a /Applications/Aquamacs.app'
 alias sourcetree='open -a /Applications/SourceTree.app'
