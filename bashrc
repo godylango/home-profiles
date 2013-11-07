@@ -104,6 +104,17 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# perlbrew - allows multiple version of perl, in addition to non-sudo
+# use of cpan. Found in the bottom of this page when trying to install
+# percona-toolkit without sudo:
+#
+# https://github.com/mxcl/homebrew/wiki/Gems,-Eggs-and-Perl-Modules
+#
+if [ -e ~/perl5/perlbrew/etc/bashrc ]
+then
+    source ~/perl5/perlbrew/etc/bashrc
+fi
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # load rvm
