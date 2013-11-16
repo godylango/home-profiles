@@ -14,6 +14,12 @@
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+
+# Mac OSX Homebrew rate limiting - get token from github for homebrew
+# to avoid blowing rate limiting on brew searches
+### export HOMEBREW_GITHUB_API_TOKEN=API_TOKEN
+
+# language stuff from Linux .profile
 export LANGUAGE="en_US:en"
 export LC_MESSAGES="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
