@@ -34,3 +34,14 @@ export RUBY_GC_MALLOC_LIMIT=79000000
 
 # read the .ackrc at each directory level instead of just ~
 export ACKRC=".ackrc"
+
+# emacs stuff
+EDITOR="emacsclient -t"
+export EDITOR=$EDITOR
+
+# keep long history
+MILLION=1000000
+export HISTFILESIZE=$MILLION
+export HISTSIZE=$MILLION
+# update bash history after each command
+export PROMPT_COMMAND="history -a"

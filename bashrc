@@ -128,17 +128,20 @@ if [ -s "$HOME/.rvm/scripts/rvm" ]; then
     fi
 fi
 
-# Add the following to your ~/.bashrc or ~/.zshrc
-hitch() {
-    command hitch "$@"
-    if [[ -s "$HOME/.hitch_export_authors" ]] ; then
-        source "$HOME/.hitch_export_authors"
-    fi
-}
-alias unhitch='hitch -u'
+# up function to move up n directories.
+up () {
+    TIMES=${1:-1};
 
-# Uncomment to persist pair info between terminal instances
-# hitch
+    for ((i=1; i<=$TIMES; i++));
+    do
+        cd ..
+    done
+}
+
+# spell word
+spell () {
+    echo $1 | ispell | head -2 | tail -1
+}
 
 # command line completion of git branches for Mac OS X Homebrew
 [ -f /usr/local/etc/bash_completion.d/git-completion.bash ] && \
