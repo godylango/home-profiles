@@ -28,6 +28,7 @@ alias ccat="pygmentize -g"
 # for connecting to `emacs --daemon`:
 alias e='emacsclient -t'
 alias vi='emacsclient -t'
+alias killemacs='emacsclient -e "(kill-emacs)"'
 
 # use a new vim
 alias vim='/usr/local/Cellar/vim/7.4.225/bin/vim'
